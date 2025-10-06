@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: forparas;
+    src: url(fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
+    font-family: forheadings;
+    src: url(fonts/Gilroy-ExtraBold.ttf);
+}
+
+body {
+    min-height: 100vh;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5efe6;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(68, 68, 68, 0.31);
+}
+
+
+/* SCREENS */
+.screen {
+    display: none;
+    padding: 2vw;
+    text-align: center;
+}
+
+.active {
+    display: block;
+    
+}
+
+/* START SCREEN STYLING HERE  */
+.start h1 {
+    font-family: forheadings;
+    color: #e86a33;
+    margin-bottom: 2vw;
+    font-size: 3vw;
+}
+
+.start p {
+    font-family: forparas;
+    color: #b4b4b4;
+    font-size: 1.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.btn {
+    font-family: forheadings;
+    background-color: #e86a33;
+    border: none;
+    color: white;
+    padding: 1vw 2.5vw;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #d45b28;
+}
+
+/* QUESTIONS SCREEN STYLING HERE */
+
+.answers h1 {
+    font-family: forheadings;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    color: #333;
+    line-height: 1.4;
+}
+
+.answers-info {
+    font-family: forparas;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #8a8989;
+    font-size: 1vw;
+    margin-bottom: 3vw;
+}
+
+.answer-buttons {
+    font-family: forparas;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1vw;
+}
+
+.answer {
+    background-color: #f8f0e5;
+    color: #333;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1vw;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.answer:hover {
+    background-color: #eadbc8;
+    border-color: #dac0ac;
+}
+
+.correct {
+    background-color: #e6fff0;
+    border-color: #a3f0c4;
+    color: #28a745;
+}
+
+.incorrect {
+    background-color: #fff0f0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #f8f0e5;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 3vw;
+}
+
+#progress {
+    height: 100%;
+    background-color: #e86a33;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+/* RESULT SCREEN STYLING HERE */
+
+.result h1 {
+    font-family: forheadings;
+    color: #e86a33;
+    margin-bottom: 3vw;
+}
+
+.Result {
+    background-color: #f8f0e5;
+    border-radius: 10px;
+    padding: 2vw;
+    margin-bottom: 3vw;
+    line-height: 2;
+}
+
+.Result p {
+    font-family: forparas;
+    font-size: 1vw;
+    color: #585858;
+}
+
+.Result h2 {
+    font-family: forheadings;
+    font-size: 2vw;
+    color: #e86a33;
+}
+
+@media (max-width:1024px) {
+    .container {
+        width: 80%;
+    }
+    .start h1 {
+        font-size: 5vw;
+        margin-bottom: 3.5vw;
+    }
+    .start p {
+        font-size: 2.5vw;
+        margin-bottom: 4.5vw;
+    }
+
+    .btn {
+        font-size: 2.5vw;
+    }
+
+    /* QUESTION SCREEN RESPONSIVE */
+
+    .answers h1 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    .answers-info {
+        font-size: 2vw;
+        margin-bottom: 4vw;
+    }
+    .answer-buttons {
+        margin-bottom: 2vw;
+    }
+    .answer {
+        padding: 2vw;
+    }
+    .progress-bar {
+        margin-top: 4vw;
+    }
+
+    /* RESULT SCREEN RESPONSIVE */
+
+    .result h1 {
+        font-size: 6vw;
+    }
+    .Result p {
+        font-size: 2vw;
+    }
+    .Result h2 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        width: 90%;
+        padding: 6vw;
+    }
+    .start h1 {
+        font-size: 10vw;
+        margin-bottom: 6.5vw;
+    }
+    .start p {
+        font-size: 5.5vw;
+        margin-bottom: 7.5vw;
+    }
+
+    .btn {
+        font-size: 5.5vw;
+        padding: 3vw 5vw;
+    }
+
+    /* QUESTION SCREEN RESPONSIVE */
+
+    .answers h1 {
+        font-size: 6vw;
+        margin-bottom: 6vw;
+    }
+    .answers-info {
+        font-size: 4vw;
+        margin-bottom: 8vw;
+    }
+    .answer-buttons {
+        margin-bottom: 6vw;
+    }
+    .answer {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    .progress-bar {
+        margin-top: 6vw;
+    }
+
+    /* RESULT SCREEN RESPONSIVE */
+
+    .result h1 {
+        font-size: 10vw;
+    }
+    .Result p {
+        font-size: 3.5vw;
+    }
+    .Result h2 {
+        font-size: 6vw;
+    }
+    .Result {
+        margin: 10vw 0;
+    }
+}
